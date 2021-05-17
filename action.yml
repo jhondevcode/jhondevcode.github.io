@@ -1,0 +1,4 @@
+- uses: lowlighter/metrics@latest
+  with:
+    # ... other options
+    template: classic
