@@ -1,0 +1,109 @@
+.nav {
+  background-color: #282c34;
+  width: 100%;
+  height: 50px;
+  color: #ffffff;
+}
+
+.nav-head {
+  display: flex;
+  align-items: center;
+}
+
+.nav-img {
+  color: white;
+  width: 35px;
+  height: auto;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-container {
+  display: flex;
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    width: 40px;
+    height: auto;
+    margin-right: 1rem;
+  }
+}
+
+.nav-menu {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 3em;
+}
+
+.nav-item {
+  color: #ffffff;
+  text-decoration: none;
+
+  --clip-rule: polygon(0 0, 0 0, 0 100%, 0% 100%);
+
+  &::after {
+    content: "";
+    display: block;
+    background: #ffffff;
+    width: 100%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clip-rule);
+    transition: clip-path 0.5s;
+  }
+
+  &:hover {
+    --clip-rule: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+.nav-label,
+.nav-input {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .nav {
+    height: 80px;
+  }
+  .nav-label {
+    display: block;
+    cursor: pointer;
+  }
+  .nav-item {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-menu {
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    background: #526079;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    transition: clip-path .5s ease-in-out;
+  }
+  .nav-input:checked + .nav-menu {
+    // background: tomato;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
