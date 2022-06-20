@@ -1,0 +1,10 @@
+main {
+  height: calc(100vh - 50px);
+  background: #282c34;
+}
+
+@media (max-width: 700px) {
+  main {
+    height: calc(100vh - 80px);
+  }
+}
