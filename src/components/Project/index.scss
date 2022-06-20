@@ -1,0 +1,31 @@
+.card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 1rem;
+  width: 320px;
+  height: 250px;
+
+  .card-img {
+    img {
+      width: calc(320px - 2rem);
+      height: 180px;
+    }
+  }
+
+  .card-info {
+    .card-title {
+      font-weight: 900;
+    }
+    .card-description {
+      overflow: scroll;
+    }
+    .card-social {
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .card {
+    width: 100%;
+  }
+}
