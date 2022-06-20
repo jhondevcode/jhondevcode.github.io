@@ -15,9 +15,10 @@ const Navbar = () => {
         <input type="checkbox" id="menu" className="nav-input" />
 
         <div className="nav-menu">
-          <a href="#" className="nav-item">Inicio</a>
-          <a href="#" className="nav-item">Acerca de</a>
-          <a href="#" className="nav-item">Contacto</a>
+          <a href="#about" className="nav-item">About me</a>
+          <a href="#projects" className="nav-item">Projects</a>
+          <a href="#technologies" className="nav-item">Technologies</a>
+          <a href="#contact" className="nav-item">Contact me</a>
         </div>
       </div>
     </div>
