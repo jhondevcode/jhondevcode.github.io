@@ -1,4 +1,3 @@
-import Project from "../Project";
 import "./index.scss";
 
 const Main = () => {
