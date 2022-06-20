@@ -10,7 +10,6 @@ install:
   - npm install
 
 script:
-  - npm run test
   - npm run build
 
 # Here is the magic part
