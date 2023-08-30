@@ -30,7 +30,7 @@ if ($state.currentLang === 'es') {
 
 <style scoped lang="scss">
 .page__welcome {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("./public/background-home.jpg") center center/cover no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("./background-home.jpg") center center/cover no-repeat;
 
   .welcome__content {
     .content__image {
