@@ -66,12 +66,12 @@ onMounted(async () => {
 
   .textwritter__text {
     font-weight: bold;
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     font-family: Roboto, Arial, Helvetica, sans-serif;
 
     .text__cursor {
       color: #ffffff;
-      font-size: 2.5rem;
+      font-size: 2.1rem;
       opacity: 1;
       animation: blink-cursor 1s steps(2) infinite;
     }
