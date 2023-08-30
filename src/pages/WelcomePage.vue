@@ -4,6 +4,9 @@ import TextWritter from '@components/TextWritter.vue';
 import { useLangStore } from "@stores/lang";
 import dict from "@i18n/index";
 
+import profile from "@assets/imgs/img-profile.jpeg";
+import background from "@assets/imgs/img-home.jpg";
+
 
 const { $state } = useLangStore();
 const words = ref<Array<String>>([]);
@@ -16,9 +19,12 @@ if ($state.currentLang === 'es') {
 </script>
 
 <template>
-  <div id="home" class="page page__welcome flex flex-row justify-content-center align-items-center">
+  <div
+    id="home"
+    :style="{ background: `linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(${background}) center center/cover no-repeat` }"
+    class="page page__welcome flex flex-row justify-content-center align-items-center">
     <div class="welcome__content flex flex-column align-items-center gap-5">
-      <img class="content__image" src="/profile.jpeg" />
+      <img class="content__image" :src="profile" />
       <div class="content__description flex flex-column align-items-center gap-1">
         <TextWritter :words="words" :step="100" :wait="3000" />
         <!-- <h1 class="description__name">{{ $t('home.name') }}</h1> -->
@@ -30,8 +36,6 @@ if ($state.currentLang === 'es') {
 
 <style scoped lang="scss">
 .page__welcome {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("./background-home.jpg") center center/cover no-repeat;
-
   .welcome__content {
     .content__image {
       max-height: 10rem;
@@ -46,7 +50,7 @@ if ($state.currentLang === 'es') {
 
       .description__info {
         font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
     }
   }
