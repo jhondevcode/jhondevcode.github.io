@@ -19,9 +19,9 @@ onMounted(async () => {
     return (word.length * step) + wait;
   }
 
-  async function write (word: String) {
+  async function write(word: String) {
     return new Promise<Number>((resolve) => {
-      const eta = calcAnimationTime(word, props.step, props.wait);      
+      const eta = calcAnimationTime(word, props.step, props.wait);
       let startWord = 0;
       let endWord = word.length;
       const interval = setInterval(() => {
@@ -52,7 +52,8 @@ onMounted(async () => {
 
 <template>
   <div class="textwritter">
-    <p class="textwritter__text" v-if="prefix">{{ $props.prefix }} {{ typed }} <span aria-hidden="true" class="text__cursor">|</span></p>
+    <p class="textwritter__text" v-if="prefix">{{ $props.prefix }} {{ typed }} <span aria-hidden="true"
+        class="text__cursor">|</span></p>
     <p class="textwritter__text" v-else>{{ typed }} <span aria-hidden="true" class="text__cursor">|</span></p>
   </div>
 </template>
