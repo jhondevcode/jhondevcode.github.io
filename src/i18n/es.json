@@ -1,0 +1,34 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "about": "Acerca de mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contáctame"
+  },
+  "home": {
+    "words": [
+      "Jhon Fernandez",
+      "Más de 6 años de experiencia en desarrollo",
+      "Desarrollador frontend y backend",
+      "Desarrollador móvil",
+      "Diseñador de UX / UI"
+    ],
+    "description": "Soy un programador full stack con amplia experiencia."
+  },
+  "about": {
+    "title": "Acerca de mí",
+    "subtitle": "Conoce un poco mas de mí y lo que hago"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "subtitle": "Tecnologías que uso en mi día a día"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Proyectos que he desarrollado"
+  },
+  "contact": {
+    "title": "Contáctame"
+  }
+}
