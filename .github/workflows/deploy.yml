@@ -1,0 +1,27 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main # Asegúrate de que esta sea la rama que estás usando
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # La rama a la que se desplegará
+          FOLDER: dist # La carpeta donde se encuentra tu app construida
