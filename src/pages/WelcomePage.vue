@@ -9,12 +9,12 @@ import background from "@assets/imgs/img-home.jpg";
 
 
 const { $state } = useLangStore();
-const words = ref<Array<String>>([]);
+let words: Array<string> = [];
 
 if ($state.currentLang === 'es') {
-  words.value = dict.es.home.words;
+  words = dict.es.home.words;
 } else {
-  words.value = dict.en.home.words;
+  words = dict.en.home.words;
 }
 </script>
 
