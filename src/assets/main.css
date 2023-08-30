@@ -1,27 +1,6 @@
 @import './base.css';
 @import './flex/index.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -41,5 +20,10 @@ body::-webkit-scrollbar{
   min-height: 100vh;
   box-sizing: border-box;
   padding: 5rem;
-  position: sticky;
+}
+
+@media only screen and (max-width: 720px) {
+  .page {
+    padding: 5rem 1rem 1rem 1rem;
+  }
 }
