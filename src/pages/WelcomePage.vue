@@ -21,7 +21,7 @@ if ($state.currentLang === 'es') {
 <template>
   <div
     id="home"
-    :style="{ background: `linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(${background}) center center/cover no-repeat` }"
+    :style="{ background: `linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${background}) center center/cover no-repeat` }"
     class="page page__welcome flex flex-row justify-content-center align-items-center">
     <div class="welcome__content flex flex-column align-items-center gap-5">
       <img class="content__image" :src="profile" />
