@@ -26,8 +26,11 @@ defineProps({
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
 
-  .group__header {}
+  .group__header {
+    color: #fff;
+  }
 
   .group__icons {
     display: grid;
