@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, watch } from "vue";
 
-defineProps({ class: { type: String } });
-const emits = defineEmits(["click"]);
+const props = defineProps({ class: { type: String }, modelValue: { type: Boolean, required: true, default: false } });
+const emits = defineEmits(["click", "update:modelValue"]);
 
 const state = ref<boolean>(false);
 
@@ -10,6 +10,10 @@ function onClick() {
   state.value = !state.value;
   emits("click", state.value);
 }
+
+watch(props, ({ modelValue }) => {
+  state.value = modelValue;
+});
 </script>
 
 <template>

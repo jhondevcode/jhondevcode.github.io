@@ -19,7 +19,7 @@ function toggle() {
       <a class="link" href="#projects" @click="toggle()">{{ $t('navbar.projects') }}</a>
       <a class="link" href="#contact" @click="toggle()">{{ $t('navbar.contact') }}</a>
     </div>
-    <NavbarBuger class="navbar__burger" @click="visible = !visible"></NavbarBuger>
+    <NavbarBuger class="navbar__burger" v-model:model-value="visible" @click="visible = !visible"></NavbarBuger>
   </nav>
 </template>
 
